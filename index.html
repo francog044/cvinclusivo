@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Inclusivo - Franco Gálvez</title>
+  <style>
+    :root {
+      --background: #f9f9f9;
+      --text: #222;
+      --blue: #0047ab; 
+      --green: #2e835f; 
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: var(--background);
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background-color: var(--blue);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    header h1, header p {
+      margin: 0.3rem 0;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 0.5rem;
+      text-decoration: underline;
+    }
+
+    .accessibility-controls {
+      background: var(--green);
+      padding: 0.8rem;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .accessibility-controls button {
+      background: #fff;
+      border: 2px solid var(--green);
+      color: var(--green);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .accessibility-controls button:hover {
+      background: var(--green);
+      color: #fff;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border: 2px solid #d1d5db;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .high-contrast main {
+    background-color: #000; 
+    border: 2px solid #fff; 
+}
+
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: var(--blue);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .high-contrast {
+      background-color: #000;
+      color: #ffffff;
+    }
+
+    .high-contrast a {
+      color: #ffffff;
+    }
+
+    footer small a {
+      color: #c4c4c4;
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Franco Alonso Gálvez Cornejo</h1>
+    <p><a href="mailto:fgalvezc@utem.cl" aria-label="Enviar correo a Franco">fgalvezc@utem.cl</a> | Santiago, Chile</p>
+    <nav aria-label="Redes sociales">
+      <a href="https://cl.linkedin.com/in/franco-g%C3%A1lvez-cornejo-62606b363/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/francog044" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <div class="accessibility-controls" aria-label="Controles de accesibilidad">
+    <button onclick="adjustFontSize(1)" aria-label="Aumentar tamaño del texto">Aumentar texto</button>
+    <button onclick="adjustFontSize(-1)" aria-label="Reducir tamaño del texto">Disminuir texto</button>
+    <button onclick="toggleContrast()" aria-label="Activar/Desactivar alto contraste">Modo oscuro</button>
+  </div>
+
+  <main>
+    <section aria-labelledby="perfil">
+      <h2 id="perfil">Perfil Profesional</h2>
+      <p>Estudiante de tercer año de Ingeniería en Informática en la Universidad Tecnológica Metropolitana de Chile, con un fuerte interés en el desarrollo tecnológico inclusivo. Busco adquirir experiencia en proyectos web accesibles, con un enfoque en la usabilidad para todo tipo de usuarios. Comprometido con el diseño universal y la implementación de buenas prácticas de accesibilidad.</p>
+    </section>
+
+    <section aria-labelledby="habilidades">
+      <h2 id="habilidades">Habilidades</h2>
+      <ul>
+        <li><strong>Técnicas:</strong> C, C++, Python, HTML, SQL</li>
+        <li><strong>Blandas:</strong> Trabajo en equipo, adaptación al cambio, comunicación efectiva</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="formacion">
+      <h2 id="formacion">Formación Académica</h2>
+      <article>
+        <h3>Proyecto de Domótica Inclusiva – Sistemas de Información</h3>
+        <p>📍 Ñuñoa, Chile | 📅 Ago 2024 – Nov 2024</p>
+        Participé activamente en el desarrollo de un proyecto de domótica enfocado en la creación de tres productos accesibles y de fácil instalación, con el objetivo de convertir viviendas convencionales en hogares inteligentes.</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="certificaciones">
+      <h2 id="certificaciones">Certificaciones y Cursos</h2>
+      <ul>
+        <li>Actualmente cursando Ingeniería en Informática - UTEM (2023-2026) </li>
+        <li>Formación escolar completa - Centro Educacional Rousseau (2009–2022)</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="idiomas">
+      <h2 id="idiomas">Idiomas</h2>
+      <ul>
+        <li>Español – Nativo</li>
+        <li>Inglés – C1 (Avanzado)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 - Franco Gálvez. <a href="#top" aria-label="Volver al inicio">Volver arriba</a></small>
+  </footer>
+
+  <script>
+    function adjustFontSize(delta) {
+      const body = document.body;
+      const style = window.getComputedStyle(body, null).getPropertyValue('font-size');
+      const currentSize = parseFloat(style);
+      body.style.fontSize = (currentSize + delta) + 'px';
+    }
+
+    function toggleContrast() {
+      document.body.classList.toggle('high-contrast');
+    }
+  </script>
+</body>
+</html>
